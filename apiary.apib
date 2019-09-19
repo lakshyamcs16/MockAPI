@@ -6,6 +6,8 @@ HOST: https://5c7efd8f-1951-4a99-824d-eb5a650f4758.mock.pstmn.io
 API to parse excel and PDF files in order to fetch relevant tables from the documents.
 
 ## Summary [/document/longshort/summary]
+Fetches the summary of parsed document and returns the final result
+
 ### Summary API [GET]
 + Response 200 (application/json)
 
@@ -21,4 +23,33 @@ API to parse excel and PDF files in order to fetch relevant tables from the docu
                         ]
                 }]
              
+        }
+        
+## Layers [/document/longshort/level/0]
+Fetches the summary of parsed document and returns the final result
+
+### Layers API [GET]
++ Response 200 (application/json)
+
+        {
+            "filename": "name of the file",
+            "level": "level 0",
+            "type": "xlsx",
+            "tables": [
+                {
+                    "range": {
+                        "selector type": "rows",
+                        "params": {
+                            "skip top rows": 4,
+                            "skip table rows": 2
+                        },
+                        "value": "A1:G50"
+                    },
+                    "data": [
+                        {},
+                        {}
+                    ],
+                    "sheet": "Balance Sheet"
+                }
+            ]
         }
