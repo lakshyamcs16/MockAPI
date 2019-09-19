@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: https://d53d474e-ce2a-4121-a1a2-af2efa378e29.mock.pstmn.io
+HOST: https://5c7efd8f-1951-4a99-824d-eb5a650f4758.mock.pstmn.io
 
 # API Parser
 
@@ -10,15 +10,15 @@ API to parse excel and PDF files in order to fetch relevant tables from the docu
 + Response 200 (application/json)
 
         {
-            "tables": [ 
-                {
-                    "table_name": "<name>",
-                    "table_data": [{}, {}]
-                }, 
-                {
-                    "table_name": "<name>",
-                    "table_data": [{}, {}]
-                } 
-            ],
-            "document_name": "<name>"
+            "documents": [{
+                "name": "name of the document",
+                "type": "balance sheet",
+                "data": [
+                          {
+                          },
+                          {
+                          }
+                        ]
+                }]
+             
         }
