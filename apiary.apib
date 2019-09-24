@@ -12,20 +12,67 @@ Fetches the summary of parsed document and returns the final result
 + Response 200 (application/json)
 
         {
-            "documents": [{
+            "documents": [
+              {
                 "name": "name of the document",
-                "type": "balance sheet",
+                "type": "balance-sheet",
                 "data": [
                           {
+                             "parent-group": "Assets",
+                             "group": "Current Assets",
+                             "item": "Net Loans",
+                             "sub-item": null,
+                             "period-type": "yearly",
+                             "period": "FY 2015",
+                             "period-value": "12/31/2015",
+                             "value": 48901
                           },
                           {
+                             "parent-group": "Assets",
+                             "group": "Current Assets",
+                             "item": "Long Term Investments",
+                             "sub-item": null,
+                             "period-type": "yearly",
+                             "period": "FY 2015",
+                             "period-value": "12/31/2015",
+                             "value": 253
+                          },
+                          {
+                             "parent-group": "Assets",
+                             "group": "Non Current Assets",
+                             "item": null,
+                             "sub-item": null,
+                             "period-type": "yearly",
+                             "period": "FY 2015",
+                             "period-value": "12/31/2015",
+                             "value": 24065
+                          },
+                          {
+                             "parent-group": "Equity",
+                             "group": "Common Stock",
+                             "item": null,
+                             "sub-item": null,
+                             "period-type": "yearly",
+                             "period": "FY 2015",
+                             "period-value": "12/31/2015",
+                             "value": 197
+                          },
+                          {
+                             "parent-group": "Equity",
+                             "group": "Other Equity",
+                             "item": null,
+                             "sub-item": null,
+                             "period-type": "yearly",
+                             "period": "FY 2015",
+                             "period-value": "12/31/2015",
+                             "value": null
                           }
                         ]
                 }]
              
         }
         
-## Layers [/document/longshort/level/0]
+## Layers [/document/longshort/level/0/summary]
 Fetches the summary of parsed document and returns the final result
 
 ### Layers API [GET]
@@ -33,21 +80,57 @@ Fetches the summary of parsed document and returns the final result
 
         {
             "filename": "name of the file",
+            "sheetname": "Sheet1",
             "level": "level 0",
             "type": "xlsx",
             "tables": [
                 {
                     "range": {
-                        "selector type": "rows",
+                        "selector type": "default",
                         "params": {
-                            "skip top rows": 4,
-                            "skip table rows": 2
+                            "skip top header rows": true,
+                            "num of blank empty rows to stop at": 2,
+                            "num of blank empty columns to stop at": 2
                         },
                         "value": "A1:G50"
                     },
                     "data": [
-                        {},
-                        {}
+                        [
+                            {
+                                "cell": "A0",
+                                "value": null
+                            },
+                            {
+                                "cell": "A1",
+                                "value": null
+                            },
+                            {
+                                "cell": "A2",
+                                "value": "FY 2015"
+                            },
+                            {
+                                "cell": "A3",
+                                "value": "FY 2016"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "B0",
+                                "value": "Current Asset"
+                            },
+                            {
+                                "cell": "B1",
+                                "value": "Net Loans"
+                            },
+                            {
+                                "cell": "B2",
+                                "value": null
+                            },
+                            {
+                                "cell": "B3",
+                                "value": null
+                            }
+                        ]
                     ],
                     "sheet": "Balance Sheet"
                 }
