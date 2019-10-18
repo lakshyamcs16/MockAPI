@@ -15,57 +15,147 @@ Fetches the summary of parsed document and returns the final result
             "documents": [
               {
                 "name": "name of the document",
-                "type": "balance-sheet",
+                "type": "Balance Sheet",
                 "data": [
                           {
-                             "parent-group": "Assets",
-                             "group": "Current Assets",
-                             "item": "Net Loans",
-                             "sub-item": null,
-                             "period-type": "yearly",
-                             "period": "FY 2015",
-                             "period-value": "12/31/2015",
-                             "value": 48901
+                             "id":"1",
+                             "name":"Current Assets",
+                             "FY 2015":"48901",
+                             "FY 2016":"63213",
+                             "FY 2017":"80316",
+                             "FY 2018":"81224",
+                             "FY 2019":"92131",
+                             "level":"0",
+                             "parent":null,
+                             "isLeaf":false,
+                             "expanded":false,
+                             "loaded":true
                           },
                           {
-                             "parent-group": "Assets",
-                             "group": "Current Assets",
-                             "item": "Long Term Investments",
-                             "sub-item": null,
-                             "period-type": "yearly",
-                             "period": "FY 2015",
-                             "period-value": "12/31/2015",
-                             "value": 253
+                             "id":"11",
+                             "name":"Cash and Short Term Investments",
+                             "FY 2015":"19746",
+                             "FY 2016":"28827",
+                             "FY 2017":"45663",
+                             "FY 2018":"42646",
+                             "FY 2019":"41743",
+                             "level":"1",
+                             "parent":"1",
+                             "isLeaf":true,
+                             "expanded":false,
+                             "loaded":true
                           },
                           {
-                             "parent-group": "Assets",
-                             "group": "Non Current Assets",
-                             "item": null,
-                             "sub-item": null,
-                             "period-type": "yearly",
-                             "period": "FY 2015",
-                             "period-value": "12/31/2015",
-                             "value": 24065
+                             "id":"12",
+                             "name":"Total Receivables",
+                             "FY 2015":"26669",
+                             "FY 2016":"31747",
+                             "FY 2017":"32136",
+                             "FY 2018":"36362",
+                             "FY 2019":"47922",
+                             "level":"1",
+                             "parent":"1",
+                             "isLeaf":true,
+                             "expanded":false,
+                             "loaded":true
                           },
                           {
-                             "parent-group": "Equity",
-                             "group": "Common Stock",
-                             "item": null,
-                             "sub-item": null,
-                             "period-type": "yearly",
-                             "period": "FY 2015",
-                             "period-value": "12/31/2015",
-                             "value": 197
+                             "id":"13",
+                             "name":"Total Inventory",
+                             "FY 2015":"125",
+                             "FY 2016":"256",
+                             "FY 2017":"212",
+                             "FY 2018":"173",
+                             "FY 2019":"152",
+                             "level":"1",
+                             "parent":"1",
+                             "isLeaf":true,
+                             "expanded":false,
+                             "loaded":true
                           },
                           {
-                             "parent-group": "Equity",
-                             "group": "Other Equity",
-                             "item": null,
-                             "sub-item": null,
-                             "period-type": "yearly",
-                             "period": "FY 2015",
-                             "period-value": "12/31/2015",
-                             "value": null
+                             "id":"14",
+                             "name":"Other Current Assets",
+                             "FY 2015":"2361",
+                             "FY 2016":"2383",
+                             "FY 2017":"2305",
+                             "FY 2018":"2043",
+                             "FY 2019":"2314",
+                             "level":"1",
+                             "parent":"1",
+                             "isLeaf":true,
+                             "expanded":false,
+                             "loaded":true
+                          },
+                          {
+                             "id":"2",
+                             "name":"Non Current Assets",
+                             "FY 2015":"24065",
+                             "FY 2016":"25883",
+                             "FY 2017":"22936",
+                             "FY 2018":"25072",
+                             "FY 2019":"22812",
+                             "level":"0",
+                             "parent":null,
+                             "isLeaf":false,
+                             "expanded":false,
+                             "loaded":true
+                          },
+                          {
+                             "id":"21",
+                             "name":"Net Loans",
+                             "FY 2015":"-",
+                             "FY 2016":"-",
+                             "FY 2017":"-",
+                             "FY 2018":"-",
+                             "FY 2019":"-",
+                             "level":"1",
+                             "parent":"2",
+                             "isLeaf":true,
+                             "expanded":false,
+                             "loaded":true
+                          },
+                          {
+                             "id":"22",
+                             "name":"Net Property/Plant/Equipment",
+                             "FY 2015":"11403",
+                             "FY 2016":"11641",
+                             "FY 2017":"11598",
+                             "FY 2018":"11494",
+                             "FY 2019":"11374",
+                             "level":"1",
+                             "parent":"2",
+                             "isLeaf":true,
+                             "expanded":false,
+                             "loaded":true
+                          },
+                          {
+                             "id":"23",
+                             "name":"Goodwill & Intangibles",
+                             "FY 2015":"1792",
+                             "FY 2016":"1803",
+                             "FY 2017":"1644",
+                             "FY 2018":"1757",
+                             "FY 2019":"1879",
+                             "level":"1",
+                             "parent":"2",
+                             "isLeaf":true,
+                             "expanded":false,
+                             "loaded":true
+                          },
+                          {
+                             "id":"24",
+                             "name":"Other Assets",
+                             "FY 2015":"10617",
+                             "FY 2016":"12096",
+                             "FY 2017":"9350",
+                             "FY 2018":"11520",
+                             "FY 2019":"9320",
+                             "level":"1",
+                             "parent":"2",
+                             "isLeaf":true,
+                             "expanded":false,
+                             "loaded":true
                           }
                         ]
                 }]
@@ -85,15 +175,35 @@ Fetches the summary of parsed document and returns the final result
             "type": "xlsx",
             "tables": [
                 {
-                    "range": {
-                        "selector type": "default",
-                        "params": {
-                            "skip top header rows": true,
-                            "num of blank empty rows to stop at": 2,
-                            "num of blank empty columns to stop at": 2
+                    "input": [{
+                        "name": "range",
+                        "label": "Range",
+                        "type":"text",
+                        "algo": {
+                            "label": "Selector Type",
+                            "type": "multiple",
+                            "value": "default",
+                            "enum": [ "default", "sheet optimizer" ],
+                            "params": {
+                                "skipHeaderRows": {
+                                   "label": "Skip top header rows",
+                                    "type": "boolean",
+                                    "value": true
+                                },
+                                "skipBlankRows": {
+                                   "label": "Blank rows to stop",
+                                    "type": "number",
+                                    "value": 2
+                                },
+                                "skipBlankColumns": {
+                                   "label": "Blank columns to stop",
+                                    "type": "number",
+                                    "value": 2
+                                }
+                            }
                         },
                         "value": "A1:G50"
-                    },
+                    }],
                     "data": [
                         [
                             {
@@ -120,15 +230,214 @@ Fetches the summary of parsed document and returns the final result
                             },
                             {
                                 "cell": "B1",
-                                "value": "Net Loans"
+                                "value": "Cash and Short Term Investments"
                             },
                             {
                                 "cell": "B2",
-                                "value": null
+                                "value": "19746"
                             },
                             {
                                 "cell": "B3",
+                                "value": "28699"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "C0",
+                                "value": " "
+                            },
+                            {
+                                "cell": "C1",
+                                "value": "Total Receivables"
+                            },
+                            {
+                                "cell": "C2",
+                                "value": "26669"
+                            },
+                            {
+                                "cell": "C3",
+                                "value": "31747"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "D0",
+                                "value": "Non Current Assets"
+                            },
+                            {
+                                "cell": "D1",
+                                "value": "Net Loans"
+                            },
+                            {
+                                "cell": "D2",
                                 "value": null
+                            },
+                            {
+                                "cell": "D3",
+                                "value": null
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "E0",
+                                "value": " "
+                            },
+                            {
+                                "cell": "E1",
+                                "value": "Net Property/Plant/Equipment"
+                            },
+                            {
+                                "cell": "E2",
+                                "value": "11403"
+                            },
+                            {
+                                "cell": "E3",
+                                "value": "11641"
+                            }
+                        ]
+                    ],
+                    "sheet": "Balance Sheet"
+                }
+            ]
+        }
+        
+## Create post [/document/longshort/level/0/summary/edit]
+
+### Create a Post [POST]
+
++ Request (application/json)
+
+        {
+            "user": "longshort",
+            "cid": "IVPLongShort"
+        }
++ Response 200 (application/json)
+
+        {
+            "filename": "name of the file",
+            "sheetname": "Sheet1",
+            "level": "level 0",
+            "type": "xlsx",
+            "tables": [
+                {
+                    "input": [{
+                        "name": "range",
+                        "label": "Range",
+                        "type":"text",
+                        "algo": {
+                            "label": "Selector Type",
+                            "type": "multiple",
+                            "value": "default",
+                            "enum": [ "default", "sheet optimizer" ],
+                            "params": {
+                                "skipHeaderRows": {
+                                   "label": "Skip top header rows",
+                                    "type": "boolean",
+                                    "value": true
+                                },
+                                "skipBlankRows": {
+                                   "label": "Blank rows to stop",
+                                    "type": "number",
+                                    "value": 2
+                                },
+                                "skipBlankColumns": {
+                                   "label": "Blank columns to stop",
+                                    "type": "number",
+                                    "value": 2
+                                }
+                            }
+                        },
+                        "value": "A1:G50"
+                    }],
+                    "data": [
+                        [
+                            {
+                                "cell": "A0",
+                                "value": null
+                            },
+                            {
+                                "cell": "A1",
+                                "value": null
+                            },
+                            {
+                                "cell": "A2",
+                                "value": "FY 2015"
+                            },
+                            {
+                                "cell": "A3",
+                                "value": "FY 2016"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "B0",
+                                "value": "Current Asset"
+                            },
+                            {
+                                "cell": "B1",
+                                "value": "Cash and Short Term Investments"
+                            },
+                            {
+                                "cell": "B2",
+                                "value": "19746"
+                            },
+                            {
+                                "cell": "B3",
+                                "value": "28699"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "C0",
+                                "value": " "
+                            },
+                            {
+                                "cell": "C1",
+                                "value": "Total Receivables"
+                            },
+                            {
+                                "cell": "C2",
+                                "value": "26669"
+                            },
+                            {
+                                "cell": "C3",
+                                "value": "31747"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "D0",
+                                "value": "Non Current Assets"
+                            },
+                            {
+                                "cell": "D1",
+                                "value": "Net Loans"
+                            },
+                            {
+                                "cell": "D2",
+                                "value": null
+                            },
+                            {
+                                "cell": "D3",
+                                "value": null
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "E0",
+                                "value": " "
+                            },
+                            {
+                                "cell": "E1",
+                                "value": "Net Property/Plant/Equipment"
+                            },
+                            {
+                                "cell": "E2",
+                                "value": "11403"
+                            },
+                            {
+                                "cell": "E3",
+                                "value": "11641"
                             }
                         ]
                     ],
