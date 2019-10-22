@@ -179,10 +179,11 @@ Fetches the summary of parsed document and returns the final result
                         "name": "range",
                         "label": "Range",
                         "type":"text",
+                        "id": "Balance Sheet",
                         "algo": {
                             "label": "Selector Type",
                             "type": "multiple",
-                            "value": "default",
+                            "value": "sheet optimizer",
                             "enum": [ "default", "sheet optimizer" ],
                             "params": {
                                 "skipHeaderRows": {
@@ -202,7 +203,7 @@ Fetches the summary of parsed document and returns the final result
                                 }
                             }
                         },
-                        "value": "A1:G50"
+                        "value": "A2:D3"
                     }],
                     "data": [
                         [
@@ -297,6 +298,131 @@ Fetches the summary of parsed document and returns the final result
                         ]
                     ],
                     "sheet": "Balance Sheet"
+                },
+                {
+                    "input": [{
+                        "name": "range",
+                        "label": "Range",
+                        "type":"text",
+                        "id": "Cashflow",
+                        "algo": {
+                            "label": "Selector Type",
+                            "type": "multiple",
+                            "value": "default",
+                            "enum": [ "default", "sheet optimizer" ],
+                            "params": {
+                                "skipHeaderRows": {
+                                   "label": "Skip top header rows",
+                                    "type": "boolean",
+                                    "value": true
+                                },
+                                "skipBlankRows": {
+                                   "label": "Blank rows to stop",
+                                    "type": "number",
+                                    "value": 2
+                                },
+                                "skipBlankColumns": {
+                                   "label": "Blank columns to stop",
+                                    "type": "number",
+                                    "value": 2
+                                }
+                            }
+                        },
+                        "value": "A4:D5"
+                    }],
+                    "data": [
+                        [
+                            {
+                                "cell": "A0",
+                                "value": null
+                            },
+                            {
+                                "cell": "A1",
+                                "value": null
+                            },
+                            {
+                                "cell": "A2",
+                                "value": "FY 2018"
+                            },
+                            {
+                                "cell": "A3",
+                                "value": "FY 2019"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "B0",
+                                "value": "Current Asset"
+                            },
+                            {
+                                "cell": "B1",
+                                "value": "Cash and Short Term Investments"
+                            },
+                            {
+                                "cell": "B2",
+                                "value": "19746"
+                            },
+                            {
+                                "cell": "B3",
+                                "value": "28699"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "C0",
+                                "value": " "
+                            },
+                            {
+                                "cell": "C1",
+                                "value": "Total Receivables"
+                            },
+                            {
+                                "cell": "C2",
+                                "value": "26669"
+                            },
+                            {
+                                "cell": "C3",
+                                "value": "31747"
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "D0",
+                                "value": "Non Current Assets"
+                            },
+                            {
+                                "cell": "D1",
+                                "value": "Net Loans"
+                            },
+                            {
+                                "cell": "D2",
+                                "value": null
+                            },
+                            {
+                                "cell": "D3",
+                                "value": null
+                            }
+                        ],
+                        [
+                            {
+                                "cell": "E0",
+                                "value": " "
+                            },
+                            {
+                                "cell": "E1",
+                                "value": "Net Property/Plant/Equipment"
+                            },
+                            {
+                                "cell": "E2",
+                                "value": "11403"
+                            },
+                            {
+                                "cell": "E3",
+                                "value": "11641"
+                            }
+                        ]
+                    ],
+                    "sheet": "Cashflow"
                 }
             ]
         }
